@@ -19,8 +19,8 @@ echo "CPU Usage: $(top -bn1 | grep 'Cpu(s)' | awk '{print $2 + $4}')%"
 #
 echo "----------------------------------------------------------"
 echo "Memory Info"
-echo "C Drive: $(df-h /mnt/c | awk 'NR==2 {print $3 " used / " $2 " total ($5" used)"}')"
-echo "D Drive: $(df-h /mnt/d | awk 'NR==2 {print $3 " used / " $2 " total ($5" used)"}')"
+echo "C Drive: $(df -h /mnt/c | awk 'NR==2 {print $3 " used / " $2 " total ("$5" used)"}')"
+echo "D Drive: $(df -h /mnt/d | awk 'NR==2 {print $3 " used / " $2 " total ("$5" used)"}')"
 #
 echo "----------------------------------------------------------"
 echo "Disk Usage $(df -h)"
